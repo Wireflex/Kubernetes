@@ -89,11 +89,11 @@ subjects:
 
 ```kubectl apply -f admin-user-service-account.yaml -f admin-user-cluster-role-binding.yaml```
 
-```kubectl -n kubernetes-dashboard create token admin-user```
+```kubectl -n kubernetes-dashboard create token admin-user``` копируем токен
 
-```kubectl proxy```
+```kubectl proxy``` на 2ой вкладке
 
-```http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/```
+```http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/``` вводим токен
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
