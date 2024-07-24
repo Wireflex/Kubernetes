@@ -122,3 +122,13 @@ subjects:
 ```kubectl port-forward app-kuber-1 11111:8000 ``` зайти на под с переадрессацией 
 
 ```kubectl logs app-kuber-1 --container app-kuber-container``` логи пода в контейнере app-kuber-container
+
+```kubectl run app-kuber-1 --image=bokovets/kuber:0.1 --port=8000``` запуск пода(модуля)
+
+```kubectl describe pod app-kuber-1``` исследование модуля(пода)
+
+```kubectl apply -f kuber-pod.yml``` создание пода из YAML [app-kuber-2](https://github.com/bakavets/k8s-lessons/blob/41e82251a022d7bcdfa718624e0ac193c15fafc1/lesson-06/kuber-pod.yaml)
+
+```kubectl port-forward app-kuber-1 11111:8000``` подключение к под через переадресацию портов
+
+```kubectl logs app-kuber-2 --container app-kuber-container``` просмотр логов
