@@ -58,33 +58,24 @@ minikube stop - остановка кластера minikube
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
-```
-/home/wireflex/.kube/config # тут находится конфиг-файл kubectl( clusters,contexts,users )
-```
-```
-kubectl config set-cluster my-external-cluster --server=https://k8s.test.com:9443 --certificate-authority=path_to_the/cafile # добавление своего кластера
-```
-```
-kubectl config set-credentials temp --username=temp --password=superroot # новый юзер с логин/паролем
-```
-```
-kubectl config set-credentials temp --token=supertoken # переопределение аутентификации пользователя ( токен вместо пароля ) 
-```
-```
-kubectl config set-context some-context --cluster=my-external-cluster --user=temp --namespace=some-namespace # создание контекста 
-```
-```
-kubectl config get-contexts/clusters/users # просмотр всех контекстов/кластеров/юзеров
-```
-```
-kubectl get pods --all-namespaces # просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
-```
-```
-kubectl config current-context # текущий(последний созданный) контекст
-```
-```
-kubectl use-context k8s-cluster-1 # переход на 1ый контекст ( был k8s-cluster-2 )
-```
-```
-kubectl config delete-context some-context # удаление контекста
-```
+```/home/wireflex/.kube/config``` тут находится конфиг-файл kubectl( clusters,contexts,users )
+
+```kubectl config set-cluster my-external-cluster --server=https://k8s.test.com:9443 --certificate-authority=path_to_the/cafile ``` добавление своего кластера
+
+```kubectl config set-credentials temp --username=temp --password=superroot ``` новый юзер с логин/паролем
+
+```kubectl config set-credentials temp --token=supertoken ``` переопределение аутентификации пользователя ( токен вместо пароля ) 
+
+```kubectl config set-context some-context --cluster=my-external-cluster --user=temp --namespace=some-namespace ``` создание контекста 
+
+```kubectl config get-contexts/clusters/users ``` просмотр всех контекстов/кластеров/юзеров
+
+```kubectl get pods --all-namespaces ``` просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
+
+```kubectl config current-context ``` текущий(последний созданный) контекст
+
+```kubectl use-context k8s-cluster-1 ``` переход на 1ый контекст ( был k8s-cluster-2 )
+
+```kubectl config delete-context some-context ``` удаление контекста
+
+```kubectl describe pod app-kuber-1``` описание пода
