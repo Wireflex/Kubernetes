@@ -132,3 +132,15 @@ subjects:
 ```kubectl port-forward app-kuber-1 11111:8000``` подключение к под через переадресацию портов
 
 ```kubectl logs app-kuber-2 --container app-kuber-container``` просмотр логов
+
+```kubectl get po -L run,app,environment``` вывод подов с метками(run,app,environment)
+
+```kubectl label po app-kuber-1 environment=dev ``` добавление метки environment=dev в под app-kuber-1
+
+```kubectl label node k8s-cluster-1 gpu=true``` добавление метки gpu=true к ноде
+
+```kubectl annotate pod app-kuber-2 company-name/creator-email="developer@example.com"``` добавление аннотации ( можно посмотреть в describe pod )
+
+```kubectl get ns``` пространство имён #============#  ```delete ns``` удаление
+
+```kubectl create namespace qa``` создание намспейса( можно через манифест namespace.yml, к примеру)
