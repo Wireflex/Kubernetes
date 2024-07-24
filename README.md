@@ -45,3 +45,34 @@ minikube version
 </details>
 
 ----
+
+```
+minikube start --vm-driver=docker/virtualbox (по дефолту docker ) # запуск Minikube
+```
+```
+minikube start --profile k8s-cluster-1 # создание локального миникуб кластера
+```
+```
+minikube stop - остановка кластера minikube
+```
+
+# Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
+
+```
+/home/wireflex/.kube/config # тут находится конфиг-файл kubectl( clusters,contexts,users )
+```
+```
+kubectl config set-cluster my-external-cluster --server=https://k8s.test.com:9443 --certificate-authority=path_to_the/cafile # добавление своего кластера
+```
+```
+kubectl config set-credentials temp --username=temp --password=superroot # новый юзер с логин/паролем
+```
+```
+kubectl config set-credentials temp --token=supertoken # переопределение аутентификации пользователя ( токен вместо пароля ) 
+```
+```
+kubectl config set-context some-context --cluster=my-external-cluster --user=temp --namespace=some-namespace # создание контекста 
+```
+```
+kubectl get pods --all-namespaces # просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
+```
