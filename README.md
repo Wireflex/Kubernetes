@@ -99,6 +99,8 @@ subjects:
 
 ```/home/wireflex/.kube/config``` тут находится конфиг-файл kubectl( clusters,contexts,users )
 
+```kubectl get pods --all-namespaces ``` просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
+
 ```kubectl config set-cluster my-external-cluster --server=https://k8s.test.com:9443 --certificate-authority=path_to_the/cafile ``` добавление своего кластера
 
 ```kubectl config set-credentials temp --username=temp --password=superroot ``` новый юзер с логин/паролем
@@ -108,8 +110,6 @@ subjects:
 ```kubectl config set-context some-context --cluster=my-external-cluster --user=temp --namespace=some-namespace ``` создание контекста 
 
 ```kubectl config get-contexts/clusters/users ``` просмотр всех контекстов/кластеров/юзеров
-
-```kubectl get pods --all-namespaces ``` просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
 
 ```kubectl config current-context ``` текущий(последний созданный) контекст
 
