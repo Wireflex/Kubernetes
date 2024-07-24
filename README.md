@@ -46,15 +46,54 @@ minikube version
 
 ----
 
+```minikube start --vm-driver=docker/virtualbox (по дефолту docker ) ``` запуск Minikube
+
+```minikube start --profile k8s-cluster-1 ``` создание локального миникуб кластера
+
+```minikube stop ``` остановка кластера minikube
+
+## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
+
+```kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml```
+
+<details> <summary><kbd>admin-user-service-account.yaml</kbd></summary>
+
+```  
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
 ```
-minikube start --vm-driver=docker/virtualbox (по дефолту docker ) # запуск Minikube
+
+</details>
+
+<details> <summary><kbd>admin-user-cluster-role-binding.yaml</kbd></summary>
+
+``` 
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+
 ```
-```
-minikube start --profile k8s-cluster-1 # создание локального миникуб кластера
-```
-```
-minikube stop - остановка кластера minikube
-```
+</details>
+
+```kubectl apply -f admin-user-service-account.yaml -f admin-user-cluster-role-binding.yaml```
+
+```kubectl -n kubernetes-dashboard create token admin-user```
+
+```kubectl proxy```
+
+```http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/```
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
@@ -79,3 +118,7 @@ minikube stop - остановка кластера minikube
 ```kubectl config delete-context some-context ``` удаление контекста
 
 ```kubectl describe pod app-kuber-1``` описание пода
+
+```kubectl port-forward app-kuber-1 11111:8000 ``` зайти на под с переадрессацией 
+
+```kubectl logs app-kuber-1 --container app-kuber-container``` логи пода в контейнере app-kuber-container
