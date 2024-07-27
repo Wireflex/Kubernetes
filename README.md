@@ -119,8 +119,6 @@ subjects:
 
 ```kubectl describe pod app-kuber-1``` описание пода
 
-```kubectl port-forward app-kuber-1 11111:8000 ``` зайти на под с переадрессацией 
-
 ```kubectl logs app-kuber-1 --container app-kuber-container``` логи пода в контейнере app-kuber-container
 
 ```kubectl run app-kuber-1 --image=bokovets/kuber:0.1 --port=8000``` запуск пода(модуля)
