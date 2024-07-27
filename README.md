@@ -46,7 +46,7 @@ minikube version
 
 ----
 
-```minikube start --vm-driver=docker/virtualbox (по дефолту docker ) ``` запуск Minikube
+```minikube start (по дефолту docker ) --vm-driver=docker/virtualbox  ``` запуск Minikube
 
 ```minikube start --profile k8s-cluster-1 ``` создание локального миникуб кластера
 
