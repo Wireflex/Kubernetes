@@ -54,6 +54,8 @@ minikube version
 
 ## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
 
+[Install](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
+
 ```kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml```
 
 <details> <summary><kbd>admin-user-service-account.yaml</kbd></summary>
@@ -94,6 +96,8 @@ subjects:
 ```kubectl proxy``` на 2ой вкладке
 
 ```http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/``` вводим токен
+
+Десктоп-альтернатива [Lens](https://k8slens.dev/download)
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
