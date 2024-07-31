@@ -156,3 +156,5 @@ subjects:
 ```kubectl rollout undo deployment kuber``` откат на версию назад #========================================# ```kubectl rollout undo deployment kuber --to-revision=1```к конкретной ревизии
 
 curl http://kuber-service.default.svc.cluster.local
+
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
