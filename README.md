@@ -154,11 +154,11 @@ minikube version
 
 ----
 
-```minikube start (по дефолту docker ) --vm-driver=docker/virtualbox  ``` запуск Minikube
-
-```minikube start --profile k8s-cluster-1 ``` создание локального миникуб кластера
+```minikube start (по дефолту docker )``` ```# --vm-driver=docker/virtualbox``` запуск Minikube
 
 ```minikube stop ``` остановка кластера minikube
+
+```minikube delete``` удаление кластера
 
 ## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
 
