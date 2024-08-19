@@ -209,8 +209,6 @@ subjects:
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
-```/home/wireflex/.kube/config``` тут находится конфиг-файл kubectl( clusters,contexts,users )
-
 ```kubectl get pods --all-namespaces ``` просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
 
 ```kubectl config set-cluster my-external-cluster --server=https://k8s.test.com:9443 --certificate-authority=path_to_the/cafile ``` добавление своего кластера
