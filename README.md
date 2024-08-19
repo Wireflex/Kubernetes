@@ -209,50 +209,6 @@ subjects:
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
-```kubectl get pods --all-namespaces ``` просмотр всех системных подов ( coredns,etcd,apiserver,controller-manager,proxy,scheduler,storage-provisioner )
-
-```kubectl config set-cluster my-external-cluster --server=https://k8s.test.com:9443 --certificate-authority=path_to_the/cafile ``` добавление своего кластера
-
-```kubectl config set-credentials temp --username=temp --password=superroot ``` новый юзер с логин/паролем
-
-```kubectl config set-credentials temp --token=supertoken ``` переопределение аутентификации пользователя ( токен вместо пароля ) 
-
-```kubectl config set-context some-context --cluster=my-external-cluster --user=temp --namespace=some-namespace ``` создание контекста 
-
-```kubectl config get-contexts/clusters/users ``` просмотр всех контекстов/кластеров/юзеров
-
-```kubectl config current-context ``` текущий(последний созданный) контекст
-
-```kubectl use-context k8s-cluster-1 ``` переход на 1ый контекст ( был k8s-cluster-2 )
-
-```kubectl config delete-context some-context ``` удаление контекста
-
-```kubectl describe pod app-kuber-1``` описание пода
-
-```kubectl logs app-kuber-1 --container app-kuber-container``` логи пода в контейнере app-kuber-container
-
-```kubectl run app-kuber-1 --image=bokovets/kuber:0.1 --port=8000``` запуск пода(модуля)
-
-```kubectl describe pod app-kuber-1``` исследование модуля(пода)
-
-```kubectl apply -f kuber-pod.yml``` создание пода из YAML [app-kuber-2](https://github.com/bakavets/k8s-lessons/blob/41e82251a022d7bcdfa718624e0ac193c15fafc1/lesson-06/kuber-pod.yaml)
-
-```kubectl port-forward app-kuber-1 11111:8000``` подключение к под через переадресацию портов
-
-```kubectl logs app-kuber-2 --container app-kuber-container``` просмотр логов
-
-```kubectl get po -L run,app,environment``` вывод подов с метками(run,app,environment)
-
-```kubectl label po app-kuber-1 environment=dev ``` добавление метки environment=dev в под app-kuber-1
-
-```kubectl label node k8s-cluster-1 gpu=true``` добавление метки gpu=true к ноде
-
-```kubectl annotate pod app-kuber-2 company-name/creator-email="developer@example.com"``` добавление аннотации ( можно посмотреть в describe pod )
-
-```kubectl get ns``` пространство имён #======================================#  ```delete ns``` удаление
-
-```kubectl create namespace qa``` создание намспейса( можно через манифест namespace.yml, к примеру)
-
 ```kubectl set image deployment/kuber kuber-app=bokovets/kuber:0.1``` поменять имедж
 
 ```kubectl .... --record ``` записать историю ревизий
