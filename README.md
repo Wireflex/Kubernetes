@@ -209,6 +209,10 @@ subjects:
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
 
+По дефолту конфиг лежит в ```/home/wireflex/.kube/config``` , но если в другом месте, то переопределяем переменную окружения
+
+```export KUBECONFIG=/home/wireflex/.kube/config``` , если несколько файлов,то добавляем ```:/home/wireflex/.kube/config_2```
+
 ```kubectl set image deployment/kuber kuber-app=bokovets/kuber:0.1``` поменять имедж
 
 ```kubectl .... --record ``` записать историю ревизий
