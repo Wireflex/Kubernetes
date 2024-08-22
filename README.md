@@ -160,6 +160,8 @@ minikube version
 
 ```minikube delete``` удаление кластера
 
+```minikube ip``` айпи миникуба
+
 ## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
 
 [Install](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
@@ -213,13 +215,7 @@ subjects:
 
 ```export KUBECONFIG=/home/wireflex/.kube/config``` , если несколько файлов,то добавляем ```:/home/wireflex/.kube/config_2```
 
-```kubectl set image deployment/kuber kuber-app=bokovets/kuber:0.1``` поменять имедж
-
-```kubectl .... --record ``` записать историю ревизий
-
-```kubectl rollout history deployment kuber``` история ревизий( посмотреть почему деплой был обновлён )
-
-```kubectl rollout undo deployment kuber``` откат на версию назад #========================================# ```kubectl rollout undo deployment kuber --to-revision=1```к конкретной ревизии
+```kubectl create``` - неидемпотентная шляпа, при повторе выдаст ошибку, лучше юзать ```kubectl apply```
 
 curl http://kuber-service.default.svc.cluster.local
 
