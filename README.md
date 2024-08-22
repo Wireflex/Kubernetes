@@ -156,6 +156,8 @@ minikube version
 
 ```minikube start (по дефолту docker )``` ```# --vm-driver=docker/virtualbox``` запуск Minikube
 
+```minikube start --nodes 2 -p multinode-demo``` запуск 2ой НОДЫ
+
 ```minikube stop ``` остановка кластера minikube
 
 ```minikube delete``` удаление кластера
