@@ -219,6 +219,4 @@ subjects:
 
 ```kubectl create``` - неидемпотентная шляпа, при повторе выдаст ошибку, лучше юзать ```kubectl apply```
 
-curl http://kuber-service.default.svc.cluster.local
-
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
