@@ -166,6 +166,8 @@ minikube version
 
 ```minikube service``` ( kuber-service-nodeport --url )
 
+```minikube tunnel``` проксировать с локалки в инет
+
 ```minikube ip``` айпи миникуба
 
 ## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
