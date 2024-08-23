@@ -162,6 +162,10 @@ minikube version
 
 ```minikube delete``` удаление кластера
 
+```minikube addons list``` дополнения миникуба
+
+```minikube service``` ( kuber-service-nodeport --url )
+
 ```minikube ip``` айпи миникуба
 
 ## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
