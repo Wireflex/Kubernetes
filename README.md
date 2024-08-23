@@ -166,7 +166,7 @@ minikube version
 
 ```minikube service``` ( kuber-service-nodeport --url )
 
-```minikube tunnel``` проксировать с локалки в инет
+```minikube tunnel``` проксировать с локалки в браузер
 
 ```minikube ip``` айпи миникуба
 
