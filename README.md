@@ -164,9 +164,9 @@ minikube version
 
 ```minikube addons list``` дополнения миникуба
 
-```minikube service``` ( kuber-service-nodeport ) --url
+```minikube service ( kuber-service-nodeport ) --url``` проксировать нодпорт в инет
 
-```minikube tunnel``` проксировать с локалки в браузер
+```minikube tunnel``` проксировать ingress с локалки в браузер
 
 ```minikube ip``` айпи миникуба
 
