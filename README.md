@@ -164,7 +164,7 @@ minikube version
 
 ```minikube addons list``` дополнения миникуба
 
-```minikube service``` ( kuber-service-nodeport --url )
+```minikube service``` ( kuber-service-nodeport ) --url
 
 ```minikube tunnel``` проксировать с локалки в браузер
 
