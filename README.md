@@ -230,7 +230,6 @@ subjects:
 можно задать alias для kubectl, чтоб прям по фасту вводить команды
 ```
 echo 'alias k=kubectl' >>~/.bashrc
-echo 'complete -F __start_kubectl k' >>~/.bashrc
 ```
 
 
