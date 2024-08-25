@@ -215,6 +215,19 @@ subjects:
 
 ```http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/``` вводим токен
 
+<details> <summary><kbd>startkuberdb.sh</kbd></summary>
+
+``` 
+#!/bin/bash
+url="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/"
+kubectl -n kubernetes-dashboard create token admin-user
+kubectl proxy &
+sleep 7
+cmd.exe /c start $url
+
+```
+</details>
+
 Десктоп-альтернатива [Lens](https://k8slens.dev/download)
 
 # Kubernetes <img src="https://skillicons.dev/icons?i=kubernetes" />
