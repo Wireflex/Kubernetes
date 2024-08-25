@@ -240,10 +240,9 @@ cmd.exe /c start $url
 
 ```kubectl get events --watch``` отслеживать ивенты(логи) в реал тайме
 
-можно задать alias для kubectl, чтоб прям по фасту вводить команды
+можно задать alias 'k' для kubectl, чтоб прям по фасту вводить команды
 ```
 echo 'alias k=kubectl' >>~/.bashrc
 ```
-
 
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
