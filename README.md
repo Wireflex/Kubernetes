@@ -225,4 +225,6 @@ subjects:
 
 ```kubectl create``` - неидемпотентная шляпа, при повторе выдаст ошибку, лучше юзать ```kubectl apply```
 
+```kubectl get events --watch``` отслеживать ивенты(логи) в реал тайме
+
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
