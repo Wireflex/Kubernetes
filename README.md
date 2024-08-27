@@ -170,6 +170,8 @@ minikube version
 
 ```minikube ip``` айпи миникуба
 
+```minikube ssh``` зайти внутрь миникуба ( там и будут крутиться докеры )
+
 ## Dashboard UI <img src="https://skillicons.dev/icons?i=sequelize" />
 
 [Install](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/)
