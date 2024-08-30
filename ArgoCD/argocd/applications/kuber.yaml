@@ -8,23 +8,19 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  # The project the application belongs to.
-  project: development
+  project: development     # это то,что создали выше в dev.yaml
 
-  # Source of the application manifests
-  source:
-    repoURL: https://github.com/bakavets/k8s-lessons.git  # Can point to either a Helm chart repo or a git repo.
-    targetRevision: master  # For Helm, this refers to the chart version.
-    path: lesson-30/dev/kuber  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
+  source:   # из какого репозитория брать исходный код 
+    repoURL: https://github.com/Wireflex/Kubernetes.git  # Can point to either a Helm chart repo or a git repo.
+    targetRevision: main  # For Helm, this refers to the chart version.
+    path: ArgoCD/dev/kuber  # This has no meaning for Helm charts pulled directly from a Helm repo instead of git.
 
-  # Destination cluster and namespace to deploy the application
-  destination:
+  destination:    # куда деплоим (у нас только 1 дефолтный)
     server: https://kubernetes.default.svc
-    namespace: kuber
+    namespace: kuber    # этого намспейса пока нет, но ниже в CreateNamespace создадим
 
-  # Sync policy
-  syncPolicy:
-    automated: # automated sync by default retries failed attempts 5 times with following delays between attempts ( 5s, 10s, 20s, 40s, 80s ); retry controlled using `retry` field.
+  syncPolicy:    # используется для автоматического обнаружния коммитов ArgoCD, будет чекать каждые 3 минуты
+    automated: # можно указать manual и тогда вручную нужно будет начинать CD
       prune: true # Specifies if resources should be pruned during auto-syncing ( false by default ).
       selfHeal: true # Specifies if partial app sync should be executed when resources are changed only in target Kubernetes cluster and no git change detected ( false by default ).
     syncOptions:     # Sync options which modifies sync behavior
