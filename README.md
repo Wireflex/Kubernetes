@@ -241,6 +241,8 @@ cmd.exe /c start $url
 
 ```kubectl create``` - неидемпотентная шляпа, при повторе выдаст ошибку, лучше юзать ```kubectl apply```
 
+```kubectl exec -it kuber-1-69d8fbcd88-j27kz -n example-1 -- /bin/bash``` зайти в ПОД 'kuber-1-69d8fbcd88-j27kz' в намспейсе 'example-1'
+
 ```kubectl get events --watch``` отслеживать ивенты(логи) в реал тайме
 
 можно задать alias 'k' для kubectl, чтоб прям по фасту вводить команды
