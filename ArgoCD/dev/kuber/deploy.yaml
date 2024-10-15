@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kuber-2
+  name: kuber-3
   labels:
     app: kuber
 spec:
